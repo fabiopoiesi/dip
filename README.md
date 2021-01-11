@@ -10,7 +10,7 @@ DIPs
 
 [Paper (pdf)](https://arxiv.org/pdf/2009.00258.pdf)
 
-<p align="center"><img src="assets/teaser.jpg" width="500"></p>
+<p align="center"><img src="assets/teaser.jpg" width="1000"></p>
 
 ## Descriptor quality and generalisation ability
 
