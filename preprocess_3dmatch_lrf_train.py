@@ -90,8 +90,8 @@ for d in root_dirs:
             corrs = np.asarray(hf_corrs['{},{}'.format(pcd1_id, pcd2_id)])
 
             # select only corresponding points
-            pcd1_corr = pcd1.select_down_sample(corrs[:, 0])
-            pcd2_corr = pcd2.select_down_sample(corrs[:, 1])
+            pcd1_corr = pcd1.select_by_index(corrs[:, 0])
+            pcd2_corr = pcd2.select_by_index(corrs[:, 1])
 
             pcd1 = pcd1.voxel_down_sample(voxel_size)
             pcd2 = pcd2.voxel_down_sample(voxel_size)
