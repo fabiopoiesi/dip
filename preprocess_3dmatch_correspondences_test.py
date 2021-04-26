@@ -67,8 +67,8 @@ for d in root_dirs:
             fT = os.path.join(root_dir, d, '02_T', '{}_{}.pkl'.format(pcd1_id, pcd2_id))
             pickle.dump(T, open(fT, 'wb'))
 
-            result = o3d.registration.registration_icp(pcd1, pcd2, .02, np.eye(4),
-                                                       o3d.registration.TransformationEstimationPointToPoint())
+            result = o3d.pipelines.registration.registration_icp(pcd1, pcd2, .02, np.eye(4),
+                                                       o3d.pipelines.registration.TransformationEstimationPointToPoint())
 
             pcd1_overlap_idx = np.asarray(result.correspondence_set)[:, 0]
             pcd2_overlap_idx = np.asarray(result.correspondence_set)[:, 1]
